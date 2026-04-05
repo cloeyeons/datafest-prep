@@ -79,9 +79,22 @@ The regression model reveals the specific impact of each variable while controll
 
 
 
-
-
-
 ## Approach 2
+
+### 1. Predicted score change for controllable variables
+### Predicted Score Improvements
+
+| Hours Studied | Attendance | Extracurricular | Sleep Hours | Physical Activity | Predicted Score Diff |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 44 | 100 | Yes | 10 | 5 | 4.11 |
+| 44 | 100 | Yes | 9 | 5 | 3.90 |
+| 44 | 99 | Yes | 10 | 5 | 3.89 |
+| 43 | 100 | Yes | 10 | 5 | 3.87 |
+| 44 | 100 | Yes | 8 | 5 | 3.69 |
+| 44 | 99 | Yes | 9 | 5 | 3.68 |
+| 44 | 98 | Yes | 10 | 5 | 3.66 |
+| 43 | 100 | Yes | 9 | 5 | 3.66 |
+| 44 | 100 | No | 10 | 5 | 3.66 |
+| 43 | 99 | Yes | 10 | 5 | 3.65 |
 
 write here
