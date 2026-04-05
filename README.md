@@ -44,18 +44,7 @@ Uncontrollable
 ### 2. Multiple Linear Regression Results
 The regression model reveals the specific impact of each variable while controlling for all other factors.
 
-| Variable | Coef. ($\beta$) | Std.Err | P-Value ($P>|t|$) | Significance |
-| :--- | :--- | :--- | :--- | :--- |
-| **Parental_Involvement** | **1.3825** | 0.250 | `0.000` | ⭐⭐⭐ |
-| **Peer_Influence** | **0.8680** | 0.230 | `0.000` | ⭐⭐⭐ |
-| **Family_Income** | **0.8483** | 0.234 | `0.000` | ⭐⭐⭐ |
-| **Parental_Education_Level** | **0.6966** | 0.223 | `0.002` | ⭐⭐ |
-| **Access_to_Resources** | **0.5611** | 0.249 | `0.024` | ⭐ |
-| **Hours_Studied** | **0.2409** | 0.029 | `0.000` | ⭐⭐⭐ |
-| **Attendance** | **0.2219** | 0.015 | `0.000` | ⭐⭐⭐ |
-| Sleep_Hours | 0.2207 | 0.118 | `0.062` | NS |
-| Physical_Activity | 0.2892 | 0.169 | `0.087` | NS |
-| Extracurricular_Activities | 0.5033 | 0.354 | `0.156` | NS |
+Regression Analysis Results| Variable | Coef. ($\beta$) | Std.Err | P-Value ($P>\|t|$) | Significance || :--- | :---: | :---: | :---: | :---: || Parental_Involvement | 1.3825 | 0.250 | 0.000 | ⭐⭐⭐ || Peer_Influence | 0.8680 | 0.230 | 0.000 | ⭐⭐⭐ || Family_Income | 0.8483 | 0.234 | 0.000 | ⭐⭐⭐ || Parental_Education_Level | 0.6966 | 0.223 | 0.002 | ⭐⭐ || Access_to_Resources | 0.5611 | 0.249 | 0.024 | ⭐ || Hours_Studied | 0.2409 | 0.029 | 0.000 | ⭐⭐⭐ || Attendance | 0.2219 | 0.015 | 0.000 | ⭐⭐⭐ || Sleep_Hours | 0.2207 | 0.118 | 0.062 | NS || Physical_Activity | 0.2892 | 0.169 | 0.087 | NS || Extracurricular_Activities | 0.5033 | 0.354 | 0.156 | NS |
 
 > **Note:** Model Constant (Intercept) = `-41.7606`.  
 > **Significance Levels:** ⭐⭐⭐ $P < 0.001$, ⭐⭐ $P < 0.01$, ⭐ $P < 0.05$, **NS** = Not Significant.
