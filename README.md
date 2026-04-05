@@ -82,7 +82,6 @@ The regression model reveals the specific impact of each variable while controll
 ## Approach 2
 
 ### 1. Predicted score change for controllable variables
-### Predicted Score Improvements
 
 | Hours Studied | Attendance | Extracurricular | Sleep Hours | Physical Activity | Predicted Score Diff |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -97,7 +96,23 @@ The regression model reveals the specific impact of each variable while controll
 | 44 | 100 | No | 10 | 5 | 3.66 |
 | 43 | 99 | Yes | 10 | 5 | 3.65 |
 
-write here
+### 2. Predicted score change for controllable variables
+
+| Family Income | Access to Resources | Parental Education | Peer Influence | Parental Involvement | Predicted Score Diff |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| High | High | Postgraduate | Positive | High | -3.44 |
+| High | High | College | Positive | High | -3.57 |
+| High | Medium | Postgraduate | Positive | High | -4.22 |
+| High | Medium | College | Positive | High | -4.34 |
+| High | Low | Postgraduate | Positive | High | -4.34 |
+| High | Low | College | Positive | High | -4.47 |
+| Medium | High | Postgraduate | Positive | High | -4.61 |
+| High | High | Postgraduate | Neutral | High | -4.61 |
+| High | High | Postgraduate | Positive | Medium | -4.63 |
+| Medium | High | College | Positive | High | -4.73 |
+
+---
+
 ## Model Performance – Random Forest Classifier
 
 We converted the regression task (`Score_Diff`) into a binary classification problem:  
