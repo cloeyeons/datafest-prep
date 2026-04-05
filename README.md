@@ -1,26 +1,31 @@
 # datafest-prep
 
-Research Question: Which factor has the most significant impact on the student's performance change?
+**Research Question:** Which factor has the most significant impact on the student's performance change?
 
-Approaches:
+**Approaches:**
 1. Compare controllable vs. uncontrollable variables
 2. Combination of factors that maximizes growth (Prediction)
 
-Data Cleaning: Remove null data, 6378 left
+**Data Cleaning:** Remove null data, 6378 left
 
-Controllable
+--- 
+
+## Defining Variables 
+**Controllable**
 - hours studied
 - attendance
 - extracurricular activities
 - sleep hours
 - physical activity 
 
-Uncontrollable
+**Uncontrollable**
 - family income
 - access to resources
 - parental education level
 - peer influence
 - parental involvement
+
+--- 
 
 ## Approach 1
 
