@@ -44,9 +44,7 @@ Uncontrollable
 ### 2. Multiple Linear Regression Results
 The regression model reveals the specific impact of each variable while controlling for all other factors.
 
-
-
-| Variable | Coef. ($\beta$) | Std.Err | P-Value ($P>\|t|$) | Significance |
+| Variable | Coef. (β) | Std.Err | P-Value (P > \|t\|) | Significance |
 | :--- | :---: | :---: | :---: | :---: |
 | **Parental_Involvement** | **1.3825** | 0.250 | `0.000` | ⭐⭐⭐ |
 | **Peer_Influence** | **0.8680** | 0.230 | `0.000` | ⭐⭐⭐ |
@@ -59,8 +57,8 @@ The regression model reveals the specific impact of each variable while controll
 | Physical_Activity | 0.2892 | 0.169 | `0.087` | NS |
 | Extracurricular_Activities | 0.5033 | 0.354 | `0.156` | NS |
 
-> **Note:** Model Constant (Intercept) = `-41.7606`.  
-> **Significance Levels:** ⭐⭐⭐ $P < 0.001$, ⭐⭐ $P < 0.01$, ⭐ $P < 0.05$, **NS** = Not Significant.
+> **Note:** Model Constant (Intercept) = `-41.7606`  
+> **Significance Levels:** ⭐⭐⭐ P < 0.001, ⭐⭐ P < 0.01, ⭐ P < 0.05, **NS** = Not Significant.
 
 ### 3. Key Findings
 
