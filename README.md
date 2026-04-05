@@ -98,3 +98,54 @@ The regression model reveals the specific impact of each variable while controll
 | 43 | 99 | Yes | 10 | 5 | 3.65 |
 
 write here
+## Model Performance – Random Forest Classifier
+
+We converted the regression task (`Score_Diff`) into a binary classification problem:  
+**Improved = 1** if `Score_Diff > 0`, else **0**.
+
+### Evaluation Metrics (test set, 20% holdout)
+
+| Metric       | Score  |
+|--------------|--------|
+| Accuracy     | 0.6207 |
+| ROC-AUC      | 0.5043 |
+
+### Classification Report
+
+| Class | Precision | Recall | F1-score | Support |
+|-------|-----------|--------|----------|---------|
+| 0 (No improvement) | 0.68 | 0.82 | 0.74 | 861 |
+| 1 (Improved)       | 0.36 | 0.21 | 0.27 | 415 |
+
+- **Macro avg**: precision = 0.52, recall = 0.52, f1 = 0.51  
+- **Weighted avg**: precision = 0.58, recall = 0.62, f1 = 0.59
+
+### Confusion Matrix
+
+|              | Predicted: 0 | Predicted: 1 |
+|--------------|--------------|--------------|
+| Actual: 0    | 703          | 158          |
+| Actual: 1    | 326          | 89           |
+
+### Feature Importance (Top 5)
+
+| Feature                               | Importance |
+|---------------------------------------|------------|
+| Attendance                            | 0.3484     |
+| Hours_Studied                         | 0.3448     |
+| Sleep_Hours                           | 0.1492     |
+| Physical_Activity                     | 0.1186     |
+| Extracurricular_Activities (binary)   | 0.0390     |
+
+### Interpretation
+
+- The model performs **only slightly better than random guessing** (ROC‑AUC ≈ 0.50).  
+- It has **high false negatives** (326 actual improvements missed) and **low recall for class 1** (0.21).  
+- Attendance and study hours are the most important features, but overall predictive power is weak.  
+- Suggests that `Score_Diff` (or its binary form) is largely **unpredictable** from the available student activity features.
+
+### Next steps
+
+- Collect more informative features (e.g., prior test scores, study quality, teacher feedback).  
+- Consider predicting the raw `Exam_Score` instead of the difference.  
+- Try other algorithms (logistic regression, gradient boosting) or feature engineering.
