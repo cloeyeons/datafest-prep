@@ -23,38 +23,61 @@ Uncontrollable
 - parental involvement
 
 ## Approach 1
-### Correlation Coefficient Table(from highest to lowest)
-Attendance                    0.177668
-Hours_Studied                 0.099537
-Parental_Involvement          0.064138
-Peer_Influence                0.047628
-Family_Income                 0.042692
-Parental_Education_Level      0.041427
-Access_to_Resources           0.021637
-Sleep_Hours                   0.018767
-Extracurricular_Activities    0.014628
-Physical_Activity             0.013673
 
+### 1. Correlation Analysis
 
+| Rank | Feature | Correlation ($r$) | Strength |
+| :--- | :--- | :--- | :--- |
+| 1 | **Attendance** | `0.177668` | 🟡 Low-Moderate |
+| 2 | **Hours_Studied** | `0.099537` | ⚪ Weak |
+| 3 | **Parental_Involvement** | `0.064138` | ⚪ Weak |
+| 4 | **Peer_Influence** | `0.047628` | ⚪ Very Weak |
+| 5 | **Family_Income** | `0.042692` | ⚪ Very Weak |
+| 6 | **Parental_Education_Level** | `0.041427` | ⚪ Very Weak |
+| 7 | **Access_to_Resources** | `0.021637` | ⚪ Very Weak |
+| 8 | **Sleep_Hours** | `0.018767` | ⚪ Very Weak |
+| 9 | **Extracurricular_Activities** | `0.014628` | ⚪ Very Weak |
+| 10 | **Physical_Activity** | `0.013673` | ⚪ Very Weak |
 
-### Regression Output
+---
 
+### 2. Multiple Linear Regression Results
+The regression model reveals the specific impact of each variable while controlling for all other factors.
 
-==============================================================================================
-                                 coef    std err          t      P>|t|      [0.025      0.975]
-----------------------------------------------------------------------------------------------
-const                        -41.7606      2.026    -20.612      0.000     -45.732     -37.789
-Hours_Studied                  0.2409      0.029      8.296      0.000       0.184       0.298
-Attendance                     0.2219      0.015     14.736      0.000       0.192       0.251
-Extracurricular_Activities     0.5033      0.354      1.420      0.156      -0.191       1.198
-Sleep_Hours                    0.2207      0.118      1.864      0.062      -0.011       0.453
-Physical_Activity              0.2892      0.169      1.711      0.087      -0.042       0.621
-Family_Income                  0.8483      0.234      3.628      0.000       0.390       1.307
-Access_to_Resources            0.5611      0.249      2.255      0.024       0.073       1.049
-Parental_Education_Level       0.6966      0.223      3.127      0.002       0.260       1.133
-Peer_Influence                 0.8680      0.230      3.777      0.000       0.418       1.319
-Parental_Involvement           1.3825      0.250      5.524      0.000       0.892       1.873
-==============================================================================================
+| Variable | Coef. ($\beta$) | Std.Err | P-Value ($P>|t|$) | Significance |
+| :--- | :--- | :--- | :--- | :--- |
+| **Parental_Involvement** | **1.3825** | 0.250 | `0.000` | ⭐⭐⭐ |
+| **Peer_Influence** | **0.8680** | 0.230 | `0.000` | ⭐⭐⭐ |
+| **Family_Income** | **0.8483** | 0.234 | `0.000` | ⭐⭐⭐ |
+| **Parental_Education_Level** | **0.6966** | 0.223 | `0.002` | ⭐⭐ |
+| **Access_to_Resources** | **0.5611** | 0.249 | `0.024` | ⭐ |
+| **Hours_Studied** | **0.2409** | 0.029 | `0.000` | ⭐⭐⭐ |
+| **Attendance** | **0.2219** | 0.015 | `0.000` | ⭐⭐⭐ |
+| Sleep_Hours | 0.2207 | 0.118 | `0.062` | NS |
+| Physical_Activity | 0.2892 | 0.169 | `0.087` | NS |
+| Extracurricular_Activities | 0.5033 | 0.354 | `0.156` | NS |
+
+> **Note:** Model Constant (Intercept) = `-41.7606`.  
+> **Significance Levels:** ⭐⭐⭐ $P < 0.001$, ⭐⭐ $P < 0.01$, ⭐ $P < 0.05$, **NS** = Not Significant.
+
+---
+
+### 3. Key Findings
+
+#### 🚀 High Impact Drivers
+* **Parental Involvement** is the most influential factor in the model. For every unit increase in parental involvement, the predicted score increases by **1.38 points**, holding other factors constant.
+* **Peer Influence** and **Family Income** also show high positive coefficients, suggesting that social environment and financial stability are strong predictors of success.
+
+### ⚠️ Statistical Observations
+* **Attendance** has the highest raw correlation but a smaller unit-coefficient (0.22) compared to environmental factors. This suggests that while attendance is necessary, it is one of many incremental contributors.
+* **Sleep, Physical Activity, and Extracurriculars** did not reach statistical significance ($P > 0.05$). In this specific dataset, these lifestyle factors do not have a reliable direct impact on grades.
+
+---
+
+### 🛠️ Tech Stack
+* **Language:** Python
+* **Analysis:** `Statsmodels`, `Pandas`, `NumPy`
+* **Methodology:** Ordinary Least Squares (OLS) Regression
 
 
 
