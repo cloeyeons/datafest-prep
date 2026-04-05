@@ -71,7 +71,7 @@ The regression model reveals the specific impact of each variable while controll
 * **Parental Involvement** is the most influential factor in the model. For every unit increase in parental involvement, the predicted score increases by **1.38 points**, holding other factors constant.
 * **Peer Influence** and **Family Income** also show high positive coefficients, suggesting that social environment and financial stability are strong predictors of success.
 
-### ⚠️ Statistical Observations
+#### ⚠️ Statistical Observations
 * **Attendance** has the highest raw correlation but a smaller unit-coefficient (0.22) compared to environmental factors. This suggests that while attendance is necessary, it is one of many incremental contributors.
 * **Sleep, Physical Activity, and Extracurriculars** did not reach statistical significance ($P > 0.05$). In this specific dataset, these lifestyle factors do not have a reliable direct impact on grades.
 
@@ -82,7 +82,7 @@ The regression model reveals the specific impact of each variable while controll
 * **Analysis:** `Statsmodels`, `Pandas`, `NumPy`
 * **Methodology:** Ordinary Least Squares (OLS) Regression
 
-
+--- 
 
 ## Approach 2
 
