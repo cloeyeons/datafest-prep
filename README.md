@@ -6,8 +6,7 @@ Approaches:
 1. Compare controllable vs. uncontrollable variables
 2. Combination of factors that maximizes growth (Prediction)
 
-Data Cleaning:
-Remove null data 
+Data Cleaning: Remove null data 
 
 ## Approach 1
 
